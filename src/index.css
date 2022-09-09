@@ -1,13 +1,120 @@
+/* All the Css is written here */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    rgb(255, 124, 0) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(255, 163, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    rgb(19, 30, 37) 66%
+  );
+  height: 100vh;
+  color: #eeee;
+  overflow-y: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.app {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+/* DROP-DOWN............................................................................... */
+
+.dropdown-wrapper {
+  height: 200px;
+}
+#direction {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  font-style: oblique;
+}
+#positions {
+  padding: 5px;
+}
+
+/* TOOL-TIP............................................................................ */
+.tooltip-wrapper {
+  height: 100%;
+}
+.hover-me {
+  padding: 1px;
+  cursor: default;
+}
+.tooltip {
+  padding: 10px;
+  background-color: bisque;
+  border-radius: 10px;
+  color: #000000;
+  z-index: 10;
+}
+.tooltip-top {
+  position: relative;
+  top: -80px;
+}
+.tooltip-left {
+  position: relative;
+  left: -162px;
+  top: -32px;
+}
+.tooltip-right {
+  position: relative;
+  right: -162px;
+  bottom: 32px;
+}
+.tooltip-bottom {
+  position: relative;
+  bottom: -20px;
+}
+.aim::after {
+  content: " ";
+  position: absolute;
+}
+.aim-top::after {
+  border-bottom: none;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid bisque;
+  bottom: -8px;
+  right: 8px;
+}
+.aim-bottom::after {
+  border-top: none;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid bisque;
+  top: -8px;
+  right: 8px;
+}
+
+.aim-left::after {
+  right: -8px;
+  border-top: 10px solid transparent;
+  border-right: none;
+  border-left: 10px solid bisque;
+  border-bottom: 10px solid transparent;
+}
+.aim-right::after {
+  left: -8px;
+  border-top: 10px solid transparent;
+  border-left: none;
+  border-right: 10px solid bisque;
+  border-bottom: 10px solid transparent;
 }
